@@ -1,0 +1,40 @@
+backend:
+  # Substitua abaixo por "seu-usuario/seu-repositorio" no GitHub
+  name: github
+  repo: seu-usuario/sequential-mirror
+  branch: main
+  auth_scope: repo
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "paginas"
+    label: "Páginas"
+    label_singular: "Página"
+    folder: "content/paginas"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Conteúdo", name: "body", widget: "markdown" }
+
+  - name: "noticias"
+    label: "Notícias"
+    label_singular: "Notícia"
+    folder: "content/noticias"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    sortable_fields: ["commit_date", "date", "title"]
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Resumo", name: "summary", widget: "text", required: false }
+      - { label: "Imagem de capa", name: "thumbnail", widget: "image", required: false }
+      - { label: "Conteúdo", name: "body", widget: "markdown" }
+
