@@ -4,12 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const navItems = [
-  { label: "Sobre", href: "#sobre" },
+  { label: "Início", href: "/" },
+  { label: "Notícias", href: "/noticias" },
+  { label: "Editais", href: "/editais" },
   { label: "Cursos", href: "#cursos" },
-  { label: "Matrícula", href: "#matricula" },
   { label: "Unidades", href: "#unidades" },
-  { label: "Serviços", href: "#servicos" },
-  { label: "Seja Parceiro", href: "#parceiro" },
 ];
 
 const Header = () => {
@@ -19,7 +18,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between md:h-20">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2">
+        <a href="/" className="flex items-center gap-2">
           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
             <GraduationCap className="h-6 w-6 text-primary-foreground" />
           </div>

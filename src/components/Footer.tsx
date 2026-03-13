@@ -34,7 +34,7 @@ const Footer = () => {
                 <GraduationCap className="h-5 w-5 text-accent-foreground" />
               </div>
               <span className="font-heading text-lg font-bold text-primary-foreground">
-                EduGroup
+                Faculdade Sequencial
               </span>
             </div>
             <p className="text-sm leading-relaxed text-primary-foreground/60">
@@ -47,10 +47,10 @@ const Footer = () => {
               Institucional
             </h4>
             <ul className="space-y-2 text-sm text-primary-foreground/60">
-              <li><a href="#sobre" className="transition-colors hover:text-accent">Sobre Nós</a></li>
-              <li><a href="#" className="transition-colors hover:text-accent">Trabalhe Conosco</a></li>
-              <li><a href="#parceiro" className="transition-colors hover:text-accent">Seja Parceiro</a></li>
-              <li><a href="#" className="transition-colors hover:text-accent">Política de Privacidade</a></li>
+              <li><a href="/historia" className="transition-colors hover:text-accent">Nossa história</a></li>
+              <li><a href="/avaliacao-institucional" className="transition-colors hover:text-accent">Avaliação institucional</a></li>
+              <li><a href="/ouvidoria" className="transition-colors hover:text-accent">Ouvidoria</a></li>
+              <li><a href="/aviso-de-privacidade" className="transition-colors hover:text-accent">Aviso de privacidade</a></li>
             </ul>
           </div>
 
@@ -59,10 +59,10 @@ const Footer = () => {
               Cursos
             </h4>
             <ul className="space-y-2 text-sm text-primary-foreground/60">
-              <li><a href="#cursos" className="transition-colors hover:text-accent">Técnicos</a></li>
-              <li><a href="#cursos" className="transition-colors hover:text-accent">Graduação</a></li>
-              <li><a href="#cursos" className="transition-colors hover:text-accent">Pós-Graduação</a></li>
-              <li><a href="#cursos" className="transition-colors hover:text-accent">Extensão</a></li>
+              <li><a href="/cursos-pos-graduacao" className="transition-colors hover:text-accent">Pós-graduação</a></li>
+              <li><a href="/graduacoes" className="transition-colors hover:text-accent">Graduação</a></li>
+              <li><a href="/category/downloads-tecnico" className="transition-colors hover:text-accent">Cursos técnicos</a></li>
+              <li><a href="/category/saude" className="transition-colors hover:text-accent">Área da saúde</a></li>
             </ul>
           </div>
 
@@ -72,13 +72,13 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3 text-sm text-primary-foreground/60">
               <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-accent" /> (11) 0000-0000
+                <Phone className="h-4 w-4 text-accent" /> (11) 5544-2000
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-accent" /> contato@edugroup.com.br
+                <Mail className="h-4 w-4 text-accent" /> contato@gruposequencial.com.br
               </li>
               <li className="flex items-start gap-2">
-                <MapPin className="h-4 w-4 shrink-0 text-accent" /> Rua Exemplo, 123 - São Paulo, SP
+                <MapPin className="h-4 w-4 shrink-0 text-accent" /> Av. Guarapiranga, 752 - São Paulo/SP
               </li>
             </ul>
             <div className="mt-4 flex gap-3">
@@ -93,7 +93,7 @@ const Footer = () => {
 
         <hr className="my-8 border-primary-foreground/10" />
         <p className="text-center text-xs text-primary-foreground/40">
-          © 2025 EduGroup. Todos os direitos reservados. Conteúdo placeholder para demonstração.
+          © {new Date().getFullYear()} Faculdade Sequencial. Todos os direitos reservados.
         </p>
       </div>
     </footer>
