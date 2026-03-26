@@ -18,6 +18,8 @@ export type Edital = {
 };
 
 export async function getNoticias(): Promise<Noticia[]> {
+  if (!sanityClient) return [];
+
   const query = `*[_type == "noticia"] | order(date desc){
     _id,
     title,
@@ -30,6 +32,8 @@ export async function getNoticias(): Promise<Noticia[]> {
 }
 
 export async function getNoticiaBySlug(slug: string): Promise<Noticia | null> {
+  if (!sanityClient) return null;
+
   const query = `*[_type == "noticia" && slug.current == $slug][0]{
     _id,
     title,
@@ -42,6 +46,8 @@ export async function getNoticiaBySlug(slug: string): Promise<Noticia | null> {
 }
 
 export async function getEditais(): Promise<Edital[]> {
+  if (!sanityClient) return [];
+
   const query = `*[_type == "edital"] | order(date desc){
     _id,
     title,
@@ -55,6 +61,8 @@ export async function getEditais(): Promise<Edital[]> {
 }
 
 export async function getEditalBySlug(slug: string): Promise<Edital | null> {
+  if (!sanityClient) return null;
+
   const query = `*[_type == "edital" && slug.current == $slug][0]{
     _id,
     title,
